@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import {motion} from 'framer-motion';
+import {AnimatePresence , motion} from 'framer-motion';
 const links = [
     {id: 1 , url: '/', title: "Home" },
     {id: 2 , url: '/about', title: "About" },
@@ -12,6 +12,60 @@ const links = [
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [activeTab , setActiveTab] = useState(links[0].id);
+    // hamburger button
+    const topVariants = {
+        closed: {
+            rotate:0
+        },
+        opened: {
+            rotate:45,
+            backgroundColor:'rgb(255,255,255)',
+        }
+    }
+    const centerVariants = {
+        closed: {
+            opacity:1
+        },
+        opened: {
+            opacity:0
+        }
+    }
+    const bottomVariants = {
+        closed: {
+            rotate:0
+        },
+        opened: {
+            rotate:-45,
+            backgroundColor:'rgb(255,255,255)',
+        }
+    }
+    // full menu animation variants
+    const listVariants = {
+        closed: {
+            x:'100vw'
+        },
+        opened: {
+            x:0,
+            transition: {
+                when:'beforeChildren',
+                staggerChildren: 0.1,
+            }
+        }
+    } 
+    const listItemVariants = {
+        closed: {
+            x:-40,
+            opacity:0,
+            rotate:15
+        },
+        opened: {
+            x:0,
+            opacity:1,
+            rotate:[0,-15,0]
+
+        }
+
+    }
     return (
         <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-48 text-lg'>
             {/* Links */}
@@ -91,22 +145,37 @@ const Navbar = () => {
             {/* RESPONSIVE MENU */}
             <div className='md:hidden'>
                 <button className='w-10 h-8 flex flex-col justify-between z-50 relative' onClick={() => setOpen((prev) => !prev)}>
-                    <div className="w-10 h-1 bg-black rounded"></div>
-                    <div className="w-10 h-1 bg-black rounded"></div>
-                    <div className="w-10 h-1 bg-black rounded"></div>
+                    <motion.div 
+                    variants={topVariants} 
+                    animate={open?'opened':'closed'}
+                    className="w-10 h-1 bg-black rounded origin-left"></motion.div>
+                    <motion.div 
+                    variants={centerVariants} 
+                    animate={open?'opened':'closed'}
+                    className="w-10 h-1 bg-black rounded"></motion.div>
+                    <motion.div 
+                    variants={bottomVariants} 
+                    animate={open?'opened':'closed'}
+                    className="w-10 h-1 bg-black rounded origin-left"></motion.div>
                 </button>
                 {/* MENU LIST */}
                 {
                     open &&
-                    <div className=' absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col justify-center items-center gap-8 text-4xl '>
+                    <AnimatePresence>
+
+                    <motion.div variants={listVariants} initial={'closed'}  animate={'opened'} className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col justify-center items-center gap-8 text-4xl z-10'>
                         {links.map((link) =>
+                        <motion.div variants={listItemVariants} key={link.id}>
                             <Link
-                                key={link.id}
                                 href={link.url}>
                                 {link.title}
-                            </Link>)
-                        }
-                    </div>
+                            </Link>
+                            
+                        </motion.div>
+                        )}
+                    </motion.div>
+                    </AnimatePresence>
+
                 }
             </div>
         </div>
