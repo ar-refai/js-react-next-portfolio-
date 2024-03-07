@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import {AnimatePresence , motion} from 'framer-motion';
+import NavLink from './NavLink';
 const links = [
     {id: 1 , url: '/', title: "Home" },
     {id: 2 , url: '/about', title: "About" },
@@ -11,7 +12,6 @@ const links = [
 ]
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const [activeTab , setActiveTab] = useState(links[0].id);
     // hamburger button
     const topVariants = {
         closed: {
@@ -62,44 +62,25 @@ const Navbar = () => {
             x:0,
             opacity:1,
             rotate:[0,-15,0]
-
         }
-
     }
     return (
         <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-48 text-lg'>
             {/* Links */}
-            <div className='hidden md:flex gap-2 md:justify-center md:w-1/3 md:ms-2 md:me-7 xl:me-0 xl:ms-0 ms-7'>
+            <div className='hidden  md:flex gap-2 md:justify-center md:w-1/3 md:ms-2 md:me-7 xl:me-0 xl:ms-0 ms-7 '>
 
-                {links.map((link) =>
-                    <Link
-                        key={link.id}
-                        href={link.url}
-                        onClick={() => {setActiveTab(link.id)}}
-                        className={`${activeTab === link.id? "": "hover:text-black/60"} relative rounded-xl px-3 py-1.5  text-black outline-sky-400 transition focus-visible:outline-2`}
-                        style={{
-                            WebkitTapHighlightColor: "transparent",
-                        }}
-                        >
-                        {activeTab === link.id && (
-                            <motion.span
-                            layoutId="bubble"
-                            className="absolute inset-0 z-10 bg-white mix-blend-difference"
-                            style={{ borderRadius: 10 }}
-                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                            />
-                        )}
-                        {link.title}
-                    </Link>)
+                {links.map((link) =><NavLink link={link} key={link.id} />)   
                 }
             </div>
             {/* LOGO */}
             <div className='md:hidden justify-center lg:flex md:w-1/3'>
                 <Link href='/'>
                     <Image 
+                        priority = {true}
                         src='/logo.png' 
                         width={144} 
                         height={144} 
+                        sizes="(max-width: auto) , (max-width: auto) "
                         alt="logo" />
                 </Link>
             </div>
@@ -144,7 +125,7 @@ const Navbar = () => {
             </div>
             {/* RESPONSIVE MENU */}
             <div className='md:hidden'>
-                <button className='w-10 h-8 flex flex-col justify-between z-50 relative' onClick={() => setOpen((prev) => !prev)}>
+                <button className='w-10 h-8 flex flex-col justify-between relative' onClick={() => setOpen((prev) => !prev)} style={{zIndex:55}}>
                     <motion.div 
                     variants={topVariants} 
                     animate={open?'opened':'closed'}
@@ -163,9 +144,9 @@ const Navbar = () => {
                     open &&
                     <AnimatePresence>
 
-                    <motion.div variants={listVariants} initial={'closed'}  animate={'opened'} className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col justify-center items-center gap-8 text-4xl z-10'>
+                    <motion.div variants={listVariants} initial={'closed'}  animate={'opened'} className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col justify-center items-center gap-8 text-4xl z-50'>
                         {links.map((link) =>
-                        <motion.div variants={listItemVariants} key={link.id}>
+                        <motion.div variants={listItemVariants} key={link.id} className='relative z-50'>
                             <Link
                                 href={link.url}>
                                 {link.title}
