@@ -88,7 +88,8 @@ const Navbar = () => {
             <div className="hidden md:flex gap-4 md:w-1/3">
             <Link href='/'>
                     <Image 
-                        src='/github.png' 
+                        src='/github.png'
+                        className='border-2 border-white rounded-full bg-white' 
                         width={25} 
                         height={25} 
                         alt="github" />
@@ -97,6 +98,7 @@ const Navbar = () => {
                 <Link href='/'>
                     <Image 
                         src='/instagram.png' 
+                        className='border-2 border-white rounded-full bg-white' 
                         width={25} 
                         height={25} 
                         alt="instagram" />
@@ -105,6 +107,7 @@ const Navbar = () => {
                     <Image 
                         src='/facebook.png' 
                         width={25} 
+                        className='border-2 border-white rounded-full bg-white' 
                         height={25} 
                         alt="facebook" />
                 </Link>
@@ -112,6 +115,7 @@ const Navbar = () => {
                     <Image 
                         src='/pinterest.png' 
                         width={25} 
+                        className='border-2 border-white rounded-full bg-white' 
                         height={25} 
                         alt="pinterest" />
                 </Link>
@@ -119,6 +123,7 @@ const Navbar = () => {
                     <Image 
                         src='/linkedin.png' 
                         width={25} 
+                        className='border-2 border-white rounded-full bg-white' 
                         height={25} 
                         alt="linkedin" />
                 </Link>
@@ -129,22 +134,22 @@ const Navbar = () => {
                     <motion.div 
                     variants={topVariants} 
                     animate={open?'opened':'closed'}
-                    className="w-10 h-1 bg-black rounded origin-left"></motion.div>
+                    className="w-10 h-1 bg-white rounded origin-left"></motion.div>
                     <motion.div 
                     variants={centerVariants} 
                     animate={open?'opened':'closed'}
-                    className="w-10 h-1 bg-black rounded"></motion.div>
+                    className="w-10 h-1 bg-white rounded"></motion.div>
                     <motion.div 
                     variants={bottomVariants} 
                     animate={open?'opened':'closed'}
-                    className="w-10 h-1 bg-black rounded origin-left"></motion.div>
+                    className="w-10 h-1 bg-white rounded origin-left"></motion.div>
                 </button>
                 {/* MENU LIST */}
                 {
                     open &&
                     <AnimatePresence>
 
-                    <motion.div variants={listVariants} initial={'closed'}  animate={'opened'} className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col justify-center items-center gap-8 text-4xl z-50'>
+                    <motion.div variants={listVariants} initial={'closed'}  animate={'opened'} className='absolute top-0 left-0 w-screen h-screen bg-zinc-950 text-white flex flex-col justify-center items-center gap-8 text-4xl z-50'>
                         {links.map((link) =>
                         <motion.div variants={listItemVariants} key={link.id} className='relative z-50'>
                             <Link

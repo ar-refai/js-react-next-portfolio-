@@ -1,21 +1,20 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from '@/components/Navbar';
 import TransitionProvider from "@/components/TransitionProvider";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Refai Porfolio Apps",
+  title: "Refai Porfolio App",
   description: "Portfolio For An Expert",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    
+    <html lang="en" className="w-screen overflow-x-hidden">
       <body className={inter.className}>
         <TransitionProvider>
-          {children}
+          {children} 
         </TransitionProvider>
       </body>
     </html>

@@ -10,7 +10,6 @@
 
 *::-webkit-scrollbar-track {
     background: #000;
-    border-radius: 5px;
 }
 *::-webkit-scrollbar-track-border {
     background: #fff;

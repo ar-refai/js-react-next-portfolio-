@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import {motion} from 'framer-motion'; 
+import ParticlesComponent from '@/components/Particles';
 const ContactPage = () => {
   return (
     <motion.div
@@ -10,6 +11,9 @@ const ContactPage = () => {
       transition = {{duration:1}}
     >
       Contact Page
+      <div className='relative z-0'>
+      <ParticlesComponent />
+      </div>
     </motion.div>
   )
 }
