@@ -4,35 +4,48 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image'
 import Link from 'next/link';
 import ParticlesComponent from '@/components/Particles';
+import BgCard from '@/components/utils/ProjectCard';
+import WebIllustration from '../../../public/works-illustration.svg';
+import Coding from '../../../public/coding.svg';
+
 
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    
+    title: "JS REACT Panda Stores E-Commerce",
+    desc: "E-Commerce Store Created By Me , Using REACT, Sanity, Next And Tailwind",
+    img: '/panda-stores.png',
+    url:'https://panda-stores.vercel.app/',
+    github:'https://github.com/ar-refai/JS-REACT-Panda-Stores',
+    developer:'Abdelrahman Elrefai'
+
   },
   {
     id: 2,
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    
+    title: "JS REACT DudeSphere Social",
+    desc: "Social Media Website Created with REACT JS , tailwind CSS and Other Tools.",
+    img: "/dude-sphere.png",
+    url:'https://dude-sphere.netlify.app/',
+    github:'https://github.com/ar-refai/JS-REACT-DudeSphere-Social',
+    developer:'Abdelrahman Elrefai'
   },
   {
     id: 3,
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    
+    title: "FrontendMentor Challenge huddle landing page",
+    desc: "Designing A Responsive huddle-landing-page Using Pure HTML , CSS and FlexBox. ",
+    img: "/landing.png",
+    url:'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/',
+    github:'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/tree/main',
+    developer:'Abdelrahman Elrefai'
   },
   {
     id: 4,
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    
+    title: "FrontendMentor Challenge FAQ Accordion Card",
+    desc: "About Designing A Responsive FAQ Accordion Card Using Pure HTML , CSS , JS, and Grid Responsiveness",
+    img: "/faq.png",
+    url:'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/',
+    github:'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/tree/main',
+    developer:'Abdelrahman Elrefai'
   },
 ];
 
@@ -40,62 +53,79 @@ const items = [
 
 const PortfolioPage = () => {
   const ref = useRef();
+  const website = useRef(null);
+  const coder = useRef(null);
+
+
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
 
+  console.log(website)
+  console.log(coder)
+  const MotionImage = motion(Image);
+
+
   return (
     <>
-    <motion.div
-      className="h-full relative z-10"
-      initial={{ y: "-200vh" }}
-      animate={{ y: '0%' }}
-      transition={{ duration: 1 }}
-    >
-      <div className="w-screen h-[600vh]  relative" ref={ref}>
-        {/* INTRO DIV */}
-        <div className="    h-[calc(100vh-96px)] flex items-center justify-center text-8xl text-center">My Works 
-        </div>
-        {/* HORIZONTAL DIVS */}
-        <div className="  sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-          <motion.div style={{ x }} className="  flex">
-            <div className="h-screen w-screen  flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
-            
-            {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-t border-0 from-zinc-950 to-slate-950`}
-                key={item.id}
-              >
-                <div className="bg-[#6f6f6f55] rounded-lg shadow-lg relative z-20 shadow-black/20 backdrop-blur-sm p-4">
-                  <div className="  flex flex-col gap-8 text-white">
-                    <h1 className="  text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                      {item.title}
-                    </h1>
-                    <div className="  relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                      <Image src={item.img} alt="" fill />
-                    </div>
-                    <p className="  w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                      {item.desc}
-                    </p>
-                    
-                    <Link href='/' className="  flex justify-end">
-                      <button className="  p-2 text-sm md:p-4 md:text-md hover:px-8 lg:text-lg bg-gradient-to-t to-zinc-950 from-slate-950 text-gray-100 font-semibold m-4 rounded-xl hover:bg-gradient-to-t hover:from-gray-100 hover:to-zinc-100 hover:text-zinc-950 hover:border-black border-2 border-white transition-all duration-300 ease-out">See Demo</button>
-                    </Link>
-                    
-                  </div>
-                  
+      <motion.div
+        className="h-full relative z-10"
+        initial={{ y: "-200vh" }}
+        animate={{ y: '0%' }}
+        transition={{ duration: 1 }}
+      >
+        <div className="w-screen h-[600vh]  relative" ref={ref}>
+          {/* INTRO DIV */}
+          <div className="flex flex-col">
+            <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-8xl font-extrabold text-center">
+            <div>
+                My Works
                 </div>
-                <div className='relative z-0'>
-      <ParticlesComponent/>
-      </div>
-              </div>
-            ))}
-          </motion.div>
+              {/* <div className='relative'>
+                <MotionImage 
+                priority
+                src={WebIllustration}
+                alt="web sites"
+                width={580}
+                height={580}
+                ref={website}
+                className='relative'
+                />
+                <MotionImage
+                priority
+                src={Coding}
+                alt="web sites"
+                width={280}
+                height={280}
+                className='absolute -left-20 bottom-5'
+                ref={coder}
+                />
+              </div> */}
+                
+            </div>
+          </div>
+          {/* HORIZONTAL DIVS */}
+          <div className="  sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+            <motion.div style={{ x }} className="  flex">
+              <div className="h-screen w-screen  flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
+
+              {items.map((item) => (
+                <div
+                  className={`h-screen w-screen flex items-center justify-center bg-gradient-to-t border-0 from-zinc-950 to-slate-950`}
+                  key={item.id}
+                >
+                  <BgCard key={item.id} item={item} />
+                  <div className='relative z-0'>
+                    <ParticlesComponent />
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
-      </div>
-      
-    </motion.div>
-      </>
+
+      </motion.div>
+    </>
   )
 }
 

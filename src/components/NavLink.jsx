@@ -16,7 +16,7 @@ const NavLink = ({ link }) => {
     return (
             <>
             <Link
-                className={`relative text-lg px-5 py-2 font-light text-zinc-400 hover:cursor-pointer hover:text-zinc-100 transition-all duration-200 hover:bg-[#ffffff11] rounded-md ${link.url=== pathName && 'bg-[#ffffff11] text-zinc-200 font-extrabold'}`}
+                className={`relative text-xl px-5 py-2 font-light text-zinc-400 hover:cursor-pointer hover:text-zinc-100 transition-all duration-200 hover:bg-[#ffffff11] rounded-md ${link.url=== pathName && 'bg-[#ffffff11] text-zinc-200 font-extrabold'}`}
                 href={link.url}
                 >
                     {link.title}

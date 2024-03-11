@@ -4,13 +4,17 @@ import { motion } from 'framer-motion';
 import Link from "next/link";
 import HeroText from "@/components/HeroText";
 import ParticlesComponent from "@/components/Particles";
-
+import { Button  } from "@material-tailwind/react";
 
 export default function Home() {
   const sentence1 = "Hi,".split('');
   const sentence2 = "I'am".split('');
   const sentence3 = "Abdelrahman ".split('');
-  const sentence4 = "Web Developer".split('');
+  const sentence4 = "A ".split('');
+  const sentence5 = "Web ".split('');
+  const sentence6 = "Developer".split('');
+  const sentence7 = "!".split('');
+
 
   return (
     <motion.div
@@ -24,7 +28,7 @@ export default function Home() {
         <motion.div initial={{y:-300}} animate={{y:0}} transition={{delay:0.6, ease:'easeIn'}} className="h-1/2 lg:h-full lg:w-1/2 relative">
           <Image
             priority= {true}
-            src='/heroimg.png'
+            src='/hero1.png'
             alt='hero'
             fill
             sizes="(max-width: auto) , (max-width: auto) "
@@ -42,6 +46,16 @@ export default function Home() {
             {sentence3.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
             <br/>
             {sentence4.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {' '}
+            {sentence5.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {' '}
+
+            {sentence6.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {' '}
+
+            {sentence7.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+
+
 
           </h1>
           {/* DESCRIPTION */}
@@ -52,16 +66,16 @@ export default function Home() {
             commitment to excellence.
           </p>
           {/* BUTTONS */}
-          <div className="flex gap-4 w-full">
-            <Link href='/portfolio'>
-            <button type='button' className="p-4 rounded-lg ring ring-white bg-white text-black  transition-all duration-500 ease-in-out hover:ring-0">
-              View my work
-            </button>
+          <div className="relative flex gap-4 w-full">
+            <Link className="relative px-6 py-3 font-bold text-black group" href='/portfolio'>
+            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
+            <span className="relative">My Work</span>
             </Link>
-            <Link href='/contact'>
-            <button type='button' className="p-4 rounded-lg ring ring-black hover:text-white hover:bg-black transition-all duration-500 ease-in-out hover:ring-0">
-              Contact me
-            </button>
+            <Link className="relative px-6 py-3 font-bold text-black group" href='/contact'>
+            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
+            <span className="relative">Contact Me</span>
             </Link>
           </div>
         </motion.div>

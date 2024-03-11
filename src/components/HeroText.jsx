@@ -19,7 +19,7 @@ const HeroText = ({ children }) => {
                         'scale3d(.9,1.05,1)',
                         'scale3d(1,1,1)',
                     ],
-                    color: 'cyan'
+                    border:'1px solid white'
                 })}}
         >
             {children}
