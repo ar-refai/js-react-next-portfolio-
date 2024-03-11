@@ -22,20 +22,20 @@ export default function BgCard({ item }) {
             animate = 'animate'
             className="relative grid h-[40rem] group w-full max-w-[28rem] items-end justify-center z-10 overflow-hidden text-center"
         >
-            <div className="group-hover:bg-[#00000044]">
+            <div className="group-hover:bg-[#00000044] ">
 
             <CardHeader
                 floated={false}
                 shadow={false}
                 color="transparent"
-                className={`absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center`}
+                className={`absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center group-hover:blur-sm`}
                 style={{backgroundImage:`url(${item.img})`}}
             >
                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
             </CardHeader>
             <CardBody className="relative py-14 px-6 md:px-12">
 
-                <motion.div className="group-hover:-translate-y-52 translate-y-0 transition-all ease-in-out duration-150">
+                <motion.div className="group-hover:-translate-y-52  translate-y-0 transition-all ease-in-out duration-150">
                 <Typography
                     variant="h2"
                     color="white"

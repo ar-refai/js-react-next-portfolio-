@@ -15,9 +15,9 @@ const items = [
     title: "JS REACT Panda Stores E-Commerce",
     desc: "E-Commerce Store Created By Me , Using REACT, Sanity, Next And Tailwind",
     img: '/panda-stores.png',
-    url:'https://panda-stores.vercel.app/',
-    github:'https://github.com/ar-refai/JS-REACT-Panda-Stores',
-    developer:'Abdelrahman Elrefai'
+    url: 'https://panda-stores.vercel.app/',
+    github: 'https://github.com/ar-refai/JS-REACT-Panda-Stores',
+    developer: 'Abdelrahman Elrefai'
 
   },
   {
@@ -25,27 +25,27 @@ const items = [
     title: "JS REACT DudeSphere Social",
     desc: "Social Media Website Created with REACT JS , tailwind CSS and Other Tools.",
     img: "/dude-sphere.png",
-    url:'https://dude-sphere.netlify.app/',
-    github:'https://github.com/ar-refai/JS-REACT-DudeSphere-Social',
-    developer:'Abdelrahman Elrefai'
+    url: 'https://dude-sphere.netlify.app/',
+    github: 'https://github.com/ar-refai/JS-REACT-DudeSphere-Social',
+    developer: 'Abdelrahman Elrefai'
   },
   {
     id: 3,
     title: "FrontendMentor Challenge huddle landing page",
     desc: "Designing A Responsive huddle-landing-page Using Pure HTML , CSS and FlexBox. ",
     img: "/landing.png",
-    url:'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/',
-    github:'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/tree/main',
-    developer:'Abdelrahman Elrefai'
+    url: 'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/',
+    github: 'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public/tree/main',
+    developer: 'Abdelrahman Elrefai'
   },
   {
     id: 4,
     title: "FrontendMentor Challenge FAQ Accordion Card",
     desc: "About Designing A Responsive FAQ Accordion Card Using Pure HTML , CSS , JS, and Grid Responsiveness",
     img: "/faq.png",
-    url:'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/',
-    github:'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/tree/main',
-    developer:'Abdelrahman Elrefai'
+    url: 'https://ar-refai.github.io/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/',
+    github: 'https://github.com/ar-refai/FrontendMentor-Newbie-Challenge-17-FAQ-Accordion-Card/tree/main',
+    developer: 'Abdelrahman Elrefai'
   },
 ];
 
@@ -61,13 +61,12 @@ const PortfolioPage = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
 
-  console.log(website)
-  console.log(coder)
   const MotionImage = motion(Image);
-
+  const MotionLink = motion(Link);
 
   return (
     <>
+    
       <motion.div
         className="h-full relative z-10"
         initial={{ y: "-200vh" }}
@@ -78,9 +77,9 @@ const PortfolioPage = () => {
           {/* INTRO DIV */}
           <div className="flex flex-col">
             <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-8xl font-extrabold text-center">
-            <div>
+              <div>
                 My Works
-                </div>
+              </div>
               {/* <div className='relative'>
                 <MotionImage 
                 priority
@@ -101,7 +100,7 @@ const PortfolioPage = () => {
                 ref={coder}
                 />
               </div> */}
-                
+
             </div>
           </div>
           {/* HORIZONTAL DIVS */}
@@ -122,8 +121,43 @@ const PortfolioPage = () => {
               ))}
             </motion.div>
           </div>
-        </div>
 
+
+        </div>
+        <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center bg-gradient-to-b from-zinc-950 to-slate-900 text-white text-center">
+          {/* THE TITLE OF DIV */}
+          <h1 className='text-8xl'>Hire Me Now!</h1>
+          {/* THE SVG BUTTON */}
+          <div className="relative">
+            <motion.svg 
+              viewBox="0 0 300 300"
+              className="w-64 h-64 md:w-[500px] md:h-[500px]text-white"
+              animate={{rotate:360}}
+              transition={{duration:8 ,ease:'linear', repeat:Infinity}}
+            >
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                />
+              </defs>
+              <text fill="#fff">
+                <textPath xlinkHref='#circlePath' className='text-2xl'>Full Stack Web Developer</textPath>
+              </text>
+            </motion.svg>
+            {/* HIRE ME LINK */}
+                <MotionLink
+                whileHover={{
+                  rotate: [0 , 50 , 0],
+                  scale: 1.2,
+                  transition: { type: 'spring', stiffness: 900, damping: 11 },
+              }}
+                href='/contact' 
+                className='w-16 h-16 md:w-20 md:h-20 absolute top-0 left-0 right-0 bottom-0 m-auto bg-white text-zinc-950 rounded-full flex items-center justify-center hover:font-extrabold hover:text-zinc-900'>
+                Hire Me
+                </MotionLink>
+          </div>
+        </div>
       </motion.div>
     </>
   )
