@@ -112,13 +112,13 @@ const PortfolioPage = () => {
             </div>
           </div>
           {/* HORIZONTAL DIVS */}
-          <div className="h-screen bg-slate-900 w-screen  sticky top-0 flex gap-4 items-center overflow-hidden">
-            <motion.div style={{ x }} className="  flex">
-              <div className="h-screen w-screen  flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
+          <div className="h-screen w-screen bg-slate-950 my-0  sticky top-0 flex items-center overflow-hidden">
+            <motion.div style={{ x }} className="flex flex-row" >
+              <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
 
               {items.map((item) => (
                 <div
-                  className={` w-screen flex items-center justify-center gap-10 bg-gradient-to-t border-0 from-zinc-950 to-slate-950`}
+                  className={`w-screen flex gap-4 items-center justify-center md:gap-0 m-0 border-0 bg-gradient-to-t from-zinc-950 to-slate-950`}
                   key={item.id}
                 >
                   <BgCard key={item.id} item={item} />
@@ -134,7 +134,7 @@ const PortfolioPage = () => {
         </div>
         <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center bg-gradient-to-b from-zinc-950 to-slate-900 text-white text-center">
           {/* THE TITLE OF DIV */}
-          <h1 className='text-8xl'>Hire Me Now!</h1>
+          <h1 className='text-5xl'>Hire Me Now!</h1>
           {/* THE SVG BUTTON */}
           <div className="relative">
             <motion.svg 

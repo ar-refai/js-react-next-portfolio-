@@ -50,7 +50,7 @@ export default function BgCard({ item }) {
                     size="lg"
                     variant="circular"
                     alt="Abdelrahman"
-                    className="border-2 border-sky-50 rounded-full w-20 h-20"
+                    className="border-2 rounded-full w-20 h-20"
                     src="./developer.jpg"
                     />
                 </Link>
@@ -72,7 +72,7 @@ export default function BgCard({ item }) {
                         <span className="relative invisible">Website</span>
                         </a>
                         {/* GITHUB LINK */}
-                        <a href={item?.github} className="relative  w-16 h-16 cursor-pointer inline-flex items-center justify-center p-1 px-1 py-5 overflow-hidden font-medium bg-stone-950 text-white rounded-full transition duration-300 ease-out border-2 border-white ring-2 ring-stone-950 shadow-md group/inner  ">
+                        <a href={item?.github} className="relative  w-16 h-16 cursor-pointer inline-flex items-center justify-center p-1 px-1 py-5 overflow-hidden font-medium bg-stone-950 text-white rounded-full transition duration-300 ease-out border-2 border-white ring-2 ring-stone-950 group/inner  ">
                         <span className="absolute bg-white text-black inset-0 flex items-center justify-center w-full h-full  duration-300 -translate-x-full bg group-hover/inner:translate-x-0 ease">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
