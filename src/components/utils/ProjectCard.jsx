@@ -62,7 +62,7 @@ export default function BgCard({ item }) {
                     <div className="w-96 h-48 rounded rotate-[-30deg] bg-gradient-to-br from-sky-300 to-sky-100 absolute bottom-0 left-0 -translate-x-full ease-out duration-600 transition-all -translate-y-[10%] mb-12 ml-9 group-hover:ml-0 group-hover:mb-32 md:group-hover:translate-x-0 group-hover:-translate-x-20  group-hover:translate-y-44">
                     <div className="flex flex-col mx-3 justify-center items-end gap-2 h-full">
                         {/* WEBSITE LINK */}
-                        <a href={item?.url} className="relative w-16 h-16 cursor-pointer inline-flex items-center justify-center p-1 px-1 py-5 overflow-hidden font-medium bg-stone-950 text-white rounded-full transition duration-300 ease-out border-2 border-white ring-2 ring-stone-950 shadow-md group/inner  ">
+                        <a href={item?.url} className="relative w-16 h-16 cursor-pointer inline-flex items-center justify-center p-1 px-1 py-5 overflow-hidden font-medium bg-stone-950 text-white rounded-full transition duration-300 ease-out border-2 border-white ring-2 ring-stone-950 group/inner  ">
                         <span className="absolute bg-white text-black inset-0 flex items-center justify-center w-full h-full  duration-300 -translate-x-full  group-hover/inner:translate-x-0 ease">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
