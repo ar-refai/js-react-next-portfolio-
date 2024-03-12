@@ -25,20 +25,27 @@ export default function Home() {
     >
         <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-48 text-lg text-white">
         {/* IMAGE CONTAINER */}
-        <motion.div initial={{y:-300}} animate={{y:0}} transition={{delay:0.6, ease:'easeIn'}} className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <motion.div 
+        initial={{y:-300}} 
+        animate={{y:0}} 
+        transition={{delay:0.6, ease:'easeIn'}} 
+        className="md:h-1/2 lg:h-full lg:w-1/2 relative h-96">
           <Image
             priority= {true}
             src='/hero1.png'
             alt='hero'
             fill
-            sizes="(max-width: auto) , (max-width: auto) "
-
+            sizes="(max-width: auto) , (max-height: auto) "
             className="object-contain"
           />
         </motion.div>
         {/* TEXT CONTAINER */}
-        <motion.div initial={{y:700}} animate={{y:0}} transition={{delay:0.6, ease:'easeIn'}} className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
-          <h1 className="md:text-6xl text-5xl font-bold self-start">
+        <motion.div 
+        initial={{y:700}} 
+        animate={{y:0}} 
+        transition={{delay:0.6, ease:'easeIn'}} 
+        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-5 md:gap-8 items-center justify-center">
+          <h1 className="md:text-6xl text-4xl font-bold self-start">
             {sentence1.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
             <br/>
             {sentence2.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
@@ -59,7 +66,7 @@ export default function Home() {
 
           </h1>
           {/* DESCRIPTION */}
-          <p className="md:text-xl">
+          <p className="text-lg md:text-xl">
             Welcome to my digital canvas, where innovation and creativity
             converge. With a keen eye for aesthetics and a mastery of code, my
             portfolio showcases a diverse collection of projects that reflect my

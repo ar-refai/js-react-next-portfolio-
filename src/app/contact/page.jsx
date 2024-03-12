@@ -27,7 +27,7 @@ const ContactPage = () => {
             <motion.span 
             initial ={{opacity:[0.4,1]}} 
             animate={{opacity:0.2}}
-            transition={{duration:1 ,repeat:Infinity , type: 'spring', stiffness: 100, damping: 11 ,delay:i*0.5}}
+            transition={{duration:1 ,repeat:Infinity , type: 'spring', stiffness: 100, damping: 48 ,delay:i*0.5}}
             key={i}>
               {letter}
             </motion.span>

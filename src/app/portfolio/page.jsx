@@ -52,10 +52,10 @@ const items = [
 
 
 const PortfolioPage = () => {
+  const TEXT = "MY PROJECTS";
   const ref = useRef();
   const website = useRef(null);
   const coder = useRef(null);
-
 
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
@@ -76,9 +76,17 @@ const PortfolioPage = () => {
         <div className="w-screen h-[600vh]  relative" ref={ref}>
           {/* INTRO DIV */}
           <div className="flex flex-col">
-            <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-8xl font-extrabold text-center">
+            <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-5xl md:text-8xl font-bold text-center">
               <div>
-                My Works
+              {TEXT.split('').map((letter,i)=> (
+            <motion.span 
+            initial ={{opacity:[0.5,1]}} 
+            animate={{opacity:0.3}}
+            transition={{duration:1 ,repeat:Infinity , type: 'spring', stiffness: 80, damping:12 ,delay:i*0.5}}
+            key={i}>
+              {letter}
+            </motion.span>
+          ))}
               </div>
               {/* <div className='relative'>
                 <MotionImage 
