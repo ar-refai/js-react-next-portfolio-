@@ -44,7 +44,7 @@ export default function Home() {
         initial={{y:700}} 
         animate={{y:0}} 
         transition={{delay:0.6, ease:'easeIn'}} 
-        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around">
+        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around md:justify-end md:justify-center">
           <h1 className="md:text-6xl text-4xl font-bold self-start">
             {sentence1.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
             <br/>

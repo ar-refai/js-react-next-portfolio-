@@ -73,7 +73,7 @@ const PortfolioPage = () => {
         animate={{ y: '0%' }}
         transition={{ duration: 1 }}
       >
-        <div className="w-screen h-[600vh]  relative" ref={ref}>
+        <div className="w-screen h-[600vh] relative" ref={ref}>
           {/* INTRO DIV */}
           <div className="flex flex-col">
             <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-5xl md:text-8xl font-bold text-center">
@@ -113,7 +113,7 @@ const PortfolioPage = () => {
           </div>
           {/* HORIZONTAL DIVS */}
           <div className="h-screen w-screen bg-slate-950 my-0  sticky top-0 flex items-center overflow-hidden">
-            <motion.div style={{ x }} className="flex flex-row" >
+            <motion.div style={{ x }} className="flex flex-row justify-between items-center" >
               <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
 
               {items.map((item) => (

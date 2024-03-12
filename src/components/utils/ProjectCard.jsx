@@ -15,24 +15,22 @@ import { PiGithubLogoLight } from "react-icons/pi";
 export default function BgCard({ item }) {
 
     // Motion Card
-    const MotionCard = motion(Card);
 
     return (
-        <MotionCard
-            animate = 'animate'
-            className="relative grid h-[35rem] md:h-[40rem] group min-w-[23rem] w-[23rem] md:min-w-[28rem] md:w-[28rem] items-end justify-center z-10 overflow-hidden text-center ">
+        <Card
+            className="relative grid h-[30rem] md:h-[40rem] group min-w-[18rem] w-[18rem] md:min-w-[28rem] md:w-[28rem] items-end justify-center z-10 overflow-hidden text-center ">
             <div>
 
             <CardHeader
                 floated={false}
                 shadow={false}
                 color="transparent"
-                className={`absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center group-hover:blur-sm`}
+                className={`absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center`}
                 style={{backgroundImage:`url(${item.img})`}}
             >
                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
             </CardHeader>
-            <CardBody className="relative py-14 px-6 md:px-12">
+            <CardBody className="relative py-10 px-6 md:px-12">
 
                 <motion.div className="md:group-hover:-translate-y-56 group-hover:-translate-y-44 translate-y-0 transition-all ease-in-out duration-150">
                 <Typography
@@ -88,7 +86,7 @@ export default function BgCard({ item }) {
             </CardBody>
             </div>
 
-        </MotionCard>
+        </Card>
     );
 }
 
