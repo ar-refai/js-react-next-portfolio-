@@ -20,9 +20,8 @@ export default function BgCard({ item }) {
     return (
         <motion.Card
             animate = 'animate'
-            className="relative grid h-[40rem] group w-full max-w-[28rem] items-end justify-center z-10 overflow-hidden text-center"
-        >
-            <div className="group-hover:bg-[#00000044] ">
+            className="relative grid h-[35rem] md:h-[40rem] group w-full max-w-[23rem] md:max-w-[28rem] items-end justify-center z-10 overflow-hidden text-center ">
+            <div>
 
             <CardHeader
                 floated={false}
@@ -35,11 +34,11 @@ export default function BgCard({ item }) {
             </CardHeader>
             <CardBody className="relative py-14 px-6 md:px-12">
 
-                <motion.div className="group-hover:-translate-y-52  translate-y-0 transition-all ease-in-out duration-150">
+                <motion.div className="md:group-hover:-translate-y-56 group-hover:-translate-y-44 translate-y-0 transition-all ease-in-out duration-150">
                 <Typography
                     variant="h2"
                     color="white"
-                    className="mb-6 font-medium leading-[1.5]"
+                    className="mb-2 md:mb-6 font-medium text-4xl md:text-5xl leading-[1.2]"
                     >
                     {item.title}
                 </Typography>
@@ -48,7 +47,7 @@ export default function BgCard({ item }) {
                 </Typography>
                 <Link href='/about'>
                 <Avatar
-                    size="xl"
+                    size="lg"
                     variant="circular"
                     alt="Abdelrahman"
                     className="border-2 border-sky-50 rounded-full w-20 h-20"
@@ -60,7 +59,7 @@ export default function BgCard({ item }) {
                 <motion.div
                 className="absolute translate-y-80 group-hover:translate-y-0 transition-all ease-in-out duration-300 w-full h-20 left-0 bottom-0  justify-center align-center bg-transparent min-w-full min-h-56">
                     
-                    <div className="w-96 h-48 rounded rotate-[-30deg] bg-gradient-to-br from-sky-300 to-sky-100 absolute bottom-0 left-0 -translate-x-full ease-out duration-600 transition-all -translate-y-[20%] mb-12 ml-9 group-hover:ml-0 group-hover:mb-32 md:group-hover:translate-x-0 group-hover:-translate-x-20  group-hover:translate-y-44">
+                    <div className="w-96 h-48 rounded rotate-[-30deg] bg-gradient-to-br from-sky-300 to-sky-100 absolute bottom-0 left-0 -translate-x-full ease-out duration-600 transition-all -translate-y-[10%] mb-12 ml-9 group-hover:ml-0 group-hover:mb-32 md:group-hover:translate-x-0 group-hover:-translate-x-20  group-hover:translate-y-44">
                     <div className="flex flex-col mx-3 justify-center items-end gap-2 h-full">
                         {/* WEBSITE LINK */}
                         <a href={item?.url} className="relative w-16 h-16 cursor-pointer inline-flex items-center justify-center p-1 px-1 py-5 overflow-hidden font-medium bg-stone-950 text-white rounded-full transition duration-300 ease-out border-2 border-white ring-2 ring-stone-950 shadow-md group/inner  ">

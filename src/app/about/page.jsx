@@ -249,7 +249,7 @@ const AboutPage = () => {
                   </div>
                 </motion.div>
                 {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
+                <div className="w-1/6 flex justify-center mt-20">
                   {/* LINE */}
                   <div className=" w-1 h-[500px] bg-gray-700 rounded relative">
                     {/* LINE CIRCLE */}

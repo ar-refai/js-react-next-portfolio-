@@ -20,7 +20,7 @@ const TransitionProvider = ({ children }) => {
                 />
                 {/* Seconed Transition Slice */}
                 <motion.div 
-                className='fixed m-auto top-0 bottom-0 left-0 right-0 text-black font-extrabold text-8xl cursor-default z-50 w-fit h-fit'
+                className='fixed m-auto top-0 bottom-0 left-0 right-0 text-black font-extrabold text-5xl md:text-8xl cursor-default z-50 w-fit h-fit'
                 initial= {{opacity:1}} 
                 animate= {{opacity:0,x:[0,0,2000]}} 
                 exit = {{opacity:0}} 

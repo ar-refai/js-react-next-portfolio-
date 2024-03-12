@@ -112,13 +112,13 @@ const PortfolioPage = () => {
             </div>
           </div>
           {/* HORIZONTAL DIVS */}
-          <div className="  sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+          <div className="h-screen w-screen  sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
             <motion.div style={{ x }} className="  flex">
               <div className="h-screen w-screen  flex items-center justify-center bg-gradient-to-t from-zinc-950 to-slate-950" />
 
               {items.map((item) => (
                 <div
-                  className={`h-screen w-screen flex items-center justify-center bg-gradient-to-t border-0 from-zinc-950 to-slate-950`}
+                  className={`h-screen w-screen flex items-center justify-center gap-10 bg-gradient-to-t border-0 from-zinc-950 to-slate-950`}
                   key={item.id}
                 >
                   <BgCard key={item.id} item={item} />
