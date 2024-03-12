@@ -22,7 +22,7 @@ const ContactPage = () => {
           </motion.div>
         </div>
         {/* FORM CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 text-7xl flex items-center">
+        <div className="h-1/2 lg:h-full lg:w-1/2 text-4xl md:text-6xl flex items-center">
           {TEXT.split('').map((letter,i)=> (
             <motion.span 
             initial ={{opacity:[0.4,1]}} 

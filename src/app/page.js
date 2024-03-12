@@ -44,7 +44,7 @@ export default function Home() {
         initial={{y:700}} 
         animate={{y:0}} 
         transition={{delay:0.6, ease:'easeIn'}} 
-        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-center">
+        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around">
           <h1 className="md:text-6xl text-4xl font-bold self-start">
             {sentence1.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
             <br/>
@@ -66,20 +66,19 @@ export default function Home() {
 
           </h1>
           {/* DESCRIPTION */}
-          <p className="text-lg md:text-xl">
+          <p className="text-base md:text-xl">
             Welcome to my digital canvas, where innovation and creativity
             converge. With a keen eye for aesthetics and a mastery of code, my
-            portfolio showcases a diverse collection of projects that reflect my
-            commitment to excellence.
+            portfolio showcases a diverse collection of projects.
           </p>
           {/* BUTTONS */}
           <div className="relative flex gap-4 w-full">
-            <Link className="relative px-6 py-3 font-bold text-black group" href='/portfolio'>
+            <Link className="relative px-4 py-2 md:px-6 md:py-3 font-bold text-black group" href='/portfolio'>
             <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
             <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
             <span className="relative">My Work</span>
             </Link>
-            <Link className="relative px-6 py-3 font-bold text-black group" href='/contact'>
+            <Link className="relative px-4 py-2 md:px-6 md:py-3 font-bold text-black group" href='/contact'>
             <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
             <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
             <span className="relative">Contact Me</span>

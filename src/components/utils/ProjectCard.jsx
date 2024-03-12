@@ -18,9 +18,9 @@ export default function BgCard({ item }) {
     const MotionCard = motion(Card);
 
     return (
-        <motion.Card
+        <MotionCard
             animate = 'animate'
-            className="relative grid h-[35rem] md:h-[40rem] group w-full max-w-[23rem] md:max-w-[28rem] items-end justify-center z-10 overflow-hidden text-center ">
+            className="relative grid h-[35rem] md:h-[40rem] group min-w-[23rem] w-[23rem] md:min-w-[28rem] md:w-[28rem] items-end justify-center z-10 overflow-hidden text-center ">
             <div>
 
             <CardHeader
@@ -88,7 +88,7 @@ export default function BgCard({ item }) {
             </CardBody>
             </div>
 
-        </motion.Card>
+        </MotionCard>
     );
 }
 
