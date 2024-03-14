@@ -1,22 +1,25 @@
-'use client'
+'use client';
 import { motion, spring } from 'framer-motion';
 import ParticlesComponent from '@/components/Particles';
-
-
 import { useState } from "react";
+import { Button } from '@material-tailwind/react';
 
 const ContactPage = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   const TEXT = "CONTACT NOW";
+
   return (
     <motion.div
-      className="h-full"
+      className="h-screen bg-gradient-to-b from-zinc-950 to-slate-950"
       initial={{ y: "-200vh" }}
       animate={{ y: '0%' }}
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER  */}
-        <div className="h-1/6 lg:h-full lg:w-1/2 text-4xl md:text-6xl flex items-center justify-center text-center">
+        <div className="h-1/6 lg:h-[calc(100vh-96px)] lg:w-1/2 text-5xl font-bold flex items-center justify-center text-center">
           {TEXT.split('').map((letter, i) => (
             <motion.span
               initial={{ opacity: [0.4, 1] }}
@@ -28,7 +31,7 @@ const ContactPage = () => {
           ))}
         </div>
         {/* FORM CONTAINER */}
-        <div className="h-5/6 lg:h-full lg:w-1/2">
+        <div className="h-5/6 lg:h-full lg:w-1/2 bg-">
           <motion.div>
             <div className="py-6 flex flex-col justify-center sm:py-12">
               <div className="relative group py-3 sm:max-w-xl sm:mx-auto">
@@ -48,27 +51,32 @@ const ContactPage = () => {
                   </div>
 
                   <form>
-                    <input
-                      className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:shadow-outline"
+                    <label className="font-semiBold text-sky-200" htmlFor="msg"> Dear Abdelrahman, </label>
+                    
+                    <textarea id='msg'
+                      className="shadow mb-4 min-h-0 appearance-none  bg-transparent border-b h-64 w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-200 transition-all ease-out duration-200"
+                      type="text" placeholder="Type your message here..." name="message" style={{height: 121}}></textarea>
+                    
+                    <label className="font-semiBold text-sky-200" htmlFor="name">Yours : </label>
+
+                    <input id='name'
+                      className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
                       type="text" placeholder="Name" name="name" />
 
-                    <input
-                      className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:shadow-outline"
+                      <label className="font-semiBold text-sky-200" htmlFor="email">My E-mail is : </label>
+                    <input id="email"
+                      className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
                       type="email" placeholder="Email" name="email" />
 
-                    <input
-                      className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:shadow-outline"
-                      type="text" placeholder="Subject" name="_subject" />
 
-                    <textarea
-                      className="shadow mb-4 min-h-0 appearance-none  bg-transparent border-b h-64 w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:shadow-outline"
-                      type="text" placeholder="Type your message here..." name="message" style={{height: 121}}></textarea>
-
+                    {success && <span className='text-green-400'>Your message sent successfully.</span>}
+                    {error && <span className=' text-red-400'>Something went wrong.</span>}
                     <div className="flex justify-end">
-                      <input
-                        className="shadow cursor-pointer  hover:bg-stone-800 bg-stone-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        type="submit" value="Send ➤" />
-                  
+                      <Button
+                        className="shadow cursor-pointer  hover:bg-stone-800 bg-stone-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
+                        >
+                          Send ➤
+                        </Button>
                     </div>
 
                   </form>

@@ -118,7 +118,7 @@ const PortfolioPage = () => {
 
               {items.map((item) => (
                 <div
-                  className={`w-screen flex gap-4 items-center justify-center md:gap-0 m-0 border-0 bg-gradient-to-t from-zinc-950 to-slate-950`}
+                  className={`w-screen h-screen flex gap-4 items-center justify-center md:gap-0 m-0 border-0 bg-gradient-to-t from-zinc-950 to-slate-950`}
                   key={item.id}
                 >
                   <BgCard key={item.id} item={item} />
