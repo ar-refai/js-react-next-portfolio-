@@ -4,8 +4,11 @@ import TransitionProvider from "@/components/TransitionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Refai Porfolio App",
-  description: "Portfolio For An Expert",
+  title: "Boda's Porfolio",
+  description: "Portfolio For A Developer : Abdelrahman Elrefai",
+  icons: {
+    icon: '/logo.png', // /public path
+  },
 };
 
 export default function RootLayout({ children }) {

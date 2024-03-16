@@ -87,7 +87,7 @@ const Navbar = () => {
             </div>
             {/* Social */}
             <div className="hidden md:flex gap-4 md:w-1/3">
-                <Link href='/'>
+                <Link href='https://www.facebook.com/ar.re.3532/'>
                     <MotionImage
 
                         whileHover={{

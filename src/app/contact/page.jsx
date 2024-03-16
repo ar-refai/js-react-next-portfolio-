@@ -3,12 +3,39 @@ import { motion, spring } from 'framer-motion';
 import ParticlesComponent from '@/components/Particles';
 import { useState } from "react";
 import { Button } from '@material-tailwind/react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
+  // INTRO TEXT
+  const TEXT = "CONTACT";
+  // SUCCESS ERROR MESSAGES
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-
-  const TEXT = "CONTACT NOW";
+  // REF FOR FORM
+  const form = useRef();
+  // FORM SUBMIT FUNCTION
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
+    console.log(process.env.NEXT_PUBLIC_SERVICE_ID)
+    emailjs
+      .sendForm('service_yjqw0fq', 'template_24wxvg9', form.current, {
+        publicKey: 'quDQiTGyVcGFEB5zi',
+      })
+      .then(
+        () => {
+          setSuccess(true);
+          form.current.reset();
+        },
+        (error) => {
+          setError(true);
+          form.current.reset();
+        },
+      );
+  };
+  
 
   return (
     <motion.div
@@ -50,33 +77,33 @@ const ContactPage = () => {
                     </p>
                   </div>
 
-                  <form>
+                  <form ref={form} onSubmit={sendEmail}>
                     <label className="font-semiBold text-sky-200" htmlFor="msg"> Dear Abdelrahman, </label>
-                    
                     <textarea id='msg'
                       className="shadow mb-4 min-h-0 appearance-none  bg-transparent border-b h-64 w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-200 transition-all ease-out duration-200"
-                      type="text" placeholder="Type your message here..." name="message" style={{height: 121}}></textarea>
+                      type="text" placeholder="Type your message here..." name="user-message" style={{height: 121}}></textarea>
                     
                     <label className="font-semiBold text-sky-200" htmlFor="name">Yours : </label>
 
                     <input id='name'
                       className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
-                      type="text" placeholder="Name" name="name" />
+                      type="text" placeholder="Name" name="user-name" />
 
                       <label className="font-semiBold text-sky-200" htmlFor="email">My E-mail is : </label>
                     <input id="email"
                       className="shadow mb-4 appearance-none bg-transparent border-b w-full py-2 px-3 text-gray-100 leading-tight focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
-                      type="email" placeholder="Email" name="email" />
+                      type="email" placeholder="Email" name="user-email" />
 
 
                     {success && <span className='text-green-400'>Your message sent successfully.</span>}
                     {error && <span className=' text-red-400'>Something went wrong.</span>}
                     <div className="flex justify-end">
-                      <Button
+                      <input type='submit'
                         className="shadow cursor-pointer  hover:bg-stone-800 bg-stone-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
-                        >
-                          Send ➤
-                        </Button>
+                        value='Send ➤'
+                        />
+                          
+                        
                     </div>
 
                   </form>
