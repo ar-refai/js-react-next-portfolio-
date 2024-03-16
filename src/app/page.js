@@ -44,7 +44,7 @@ export default function Home() {
           initial={{ y: 700 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.6, ease: 'easeIn' }}
-          className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around md:justify-center">
+          className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-2 md:gap-8 items-center justify-around md:justify-center">
           <h1 className="md:text-6xl text-4xl font-bold self-start">
             {sentence1.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
             <br />
@@ -75,24 +75,24 @@ export default function Home() {
           <div className="relative flex gap-4 w-full">
 
             {/* BTN #1 */}
-            <div class="relative inline-flex  group">
+            <div class="relative inline-flex group">
               <div
-                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                class="absolute group-hover:scale-120 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/portfolio" title="Get quote now"
-                class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                class="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">
                   My Projects
               </Link>
             </div>
 
             {/* BTN #2 */ }
-            <div class="relative inline-flex  group">
+            <div class="relative inline-flex group">
               <div
-                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                class="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/contact" title="Get quote now"
-                class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                class="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">Contact Me
               </Link>
             </div>

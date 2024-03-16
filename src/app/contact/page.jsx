@@ -62,12 +62,16 @@ const ContactPage = () => {
           <motion.div>
             <div className="py-6 flex flex-col justify-center sm:py-12">
               <div className="relative group py-3 sm:max-w-xl sm:mx-auto">
-                {/* THE UNDER CARD */}
+                {/* THE UNDER CARD #1 */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-900 shadow-lg transform group-hover:rotate-6 -rotate-6  sm:-rotate-6 rounded-lg sm:rounded-3xl duration-200 ease-out transition-all">
+                  className="absolute inset-0 bg-gradient-to-r from-sky-800 opacity-50 to-sky-900 shadow-lg transform group-hover:rotate-6  rounded-lg sm:rounded-3xl duration-200 ease-out transition-all">
+                </motion.div>
+                {/* THE UNDER CARD #2 */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-sky-900 opacity-50 to-sky-800 shadow-lg transform group-hover:rotate-12 rounded-lg sm:rounded-3xl duration-200 ease-out transition-all">
                 </motion.div>
                 {/* THE UPPER CARD */}
-                <motion.div className="text-white relative px-4 py-10 bg-gradient-to-br from-gray-700 to-sky-900 shadow-lg rounded-lg sm:rounded-3xl sm:p-20 duration-200 ease-out transition-all group-hover:-rotate-3">
+                <motion.div className="text-white relative px-4 py-10 bg-gradient-to-br from-sky-700 to-sky-900 shadow-lg rounded-lg sm:rounded-3xl sm:p-20 duration-200 ease-out transition-all group-hover:rotate-2">
 
                   <div className="text-center pb-6">
                     <h1 className="text-3xl">Contact Me!</h1>
@@ -100,15 +104,13 @@ const ContactPage = () => {
 
                     <div className="flex justify-end cursor">
                       <div class="relative inline-flex group/inner">
-                        <div
-                          class="absolute transitiona-all duration-1000 opacity-10 -inset-px bg-gradient-to-r from-[#1a7eb4] via-[#1a7eb4] to-[#3ba2d9] rounded-xl blur-lg group-hover/inner:opacity-100 group-hover/inner:-inset-1 group-hover/inner:duration-100 animate-tilt">
-                        </div>
                         <Button 
                           type='submit'
-                          class="relative inline-flex items-center justify-center z-10 cursor-pointer px-6 py-3 text-lg font-bold text-white transition-all bg-sky-950 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-950"
+                          class="relative inline-flex items-center justify-center cursor-pointer px-6 py-3 text-lg font-bold text-stone-950 transition-all bg-sky-50 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 z-20 ring-stone-950  y-950 hover:shadow-xl focus:scale-90 hover:translate-x-2"
                           >
                           Send ➤
                           </Button>
+                        
                         
                       </div>
                         

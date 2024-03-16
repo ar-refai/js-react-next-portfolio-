@@ -68,13 +68,13 @@ const Navbar = () => {
     return (
         <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-48 text-lg'>
             {/* Links */}
-            <div className='hidden  md:flex gap-2 md:justify-center md:w-1/3 md:ms-2 md:me-7 xl:me-0 xl:ms-0 ms-7 '>
+            <div className='hidden md:flex gap-2 md:justify-center md:w-1/3 md:ms-20 md:me-7 xl:me-0 xl:ms-0 ms-8 '>
 
                 {links.map((link) => <NavLink link={link} key={link.id} />)
                 }
             </div>
             {/* LOGO */}
-            <div className='md:hidden justify-center lg:flex md:w-1/3'>
+            <div className='md:hidden lg:hidden justify-center xl:flex md:w-1/3'>
                 <Link href='/'>
                     <MotionImage
                         priority={true}
