@@ -1,5 +1,5 @@
 'use client';
-import { motion, spring } from 'framer-motion';
+import { easeInOut, motion, spring } from 'framer-motion';
 import ParticlesComponent from '@/components/Particles';
 import { useState } from "react";
 import { Button } from '@material-tailwind/react';
@@ -35,7 +35,7 @@ const ContactPage = () => {
         },
       );
   };
-  
+  const MotionButton = motion(Button);
 
   return (
     <motion.div
@@ -97,12 +97,20 @@ const ContactPage = () => {
 
                     {success && <span className='text-green-400'>Your message sent successfully.</span>}
                     {error && <span className=' text-red-400'>Something went wrong.</span>}
-                    <div className="flex justify-end">
-                      <input type='submit'
-                        className="shadow cursor-pointer  hover:bg-stone-800 bg-stone-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:border-sky-400 transition-all ease-out duration-200"
-                        value='Send ➤'
-                        />
-                          
+
+                    <div className="flex justify-end cursor">
+                      <div class="relative inline-flex group/inner">
+                        <div
+                          class="absolute transitiona-all duration-1000 opacity-10 -inset-px bg-gradient-to-r from-[#1a7eb4] via-[#1a7eb4] to-[#3ba2d9] rounded-xl blur-lg group-hover/inner:opacity-100 group-hover/inner:-inset-1 group-hover/inner:duration-100 animate-tilt">
+                        </div>
+                        <Button 
+                          type='submit'
+                          class="relative inline-flex items-center justify-center z-10 cursor-pointer px-6 py-3 text-lg font-bold text-white transition-all bg-sky-950 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-950"
+                          >
+                          Send ➤
+                          </Button>
+                        
+                      </div>
                         
                     </div>
 

@@ -87,7 +87,7 @@ const Navbar = () => {
             </div>
             {/* Social */}
             <div className="hidden md:flex gap-4 md:w-1/3">
-                <Link href='https://www.facebook.com/ar.re.3532/'>
+                <Link href='https://github.com/ar-refai' target="_blank">
                     <MotionImage
 
                         whileHover={{
@@ -103,46 +103,7 @@ const Navbar = () => {
                         alt="github" />
                 </Link>
 
-                <Link href='/'>
-                    <MotionImage
-                        whileHover={{
-                            rotate: 50,
-                            scale: 1.2,
-                            transition: { type: 'spring', stiffness: 900, damping: 11 },
-                        }}
-                        src='/instagram.png'
-                        className='border-2 border-white rounded-full bg-white'
-                        width={30}
-                        height={30}
-                        alt="instagram" />
-                </Link>
-                <Link href='/'>
-                    <MotionImage
-                        whileHover={{
-                            rotate: -50,
-                            scale: 1.2,
-                            transition: { type: 'spring', stiffness: 900, damping: 11 },
-                        }}
-                        src='/facebook.png'
-                        width={30}
-                        className='border-2 border-white rounded-full bg-white'
-                        height={30}
-                        alt="facebook" />
-                </Link>
-                <Link href='/'>
-                    <MotionImage
-                        whileHover={{
-                            rotate: 50,
-                            scale: 1.2,
-                            transition: { type: 'spring', stiffness: 900, damping: 11 },
-                        }}
-                        src='/pinterest.png'
-                        width={30}
-                        className='border-2 border-white rounded-full bg-white'
-                        height={30}
-                        alt="pinterest" />
-                </Link>
-                <Link href='/'>
+                <Link href='https://www.linkedin.com/in/abdelrahman-elrefai-53230825a/' target="_blank">
                     <MotionImage
                         whileHover={{
                             rotate: -50,
@@ -155,6 +116,49 @@ const Navbar = () => {
                         height={30}
                         alt="linkedin" />
                 </Link>
+
+                <Link href='https://codepen.io/ar-refai' target="_blank">
+                    <MotionImage
+                        whileHover={{
+                            rotate: -50,
+                            scale: 1.2,
+                            transition: { type: 'spring', stiffness: 900, damping: 11 },
+                        }}
+                        src='/codepen.png'
+                        width={30}
+                        className='border-2 border-white rounded-full bg-white'
+                        height={30}
+                        alt="codepen" />
+                </Link>
+
+
+                <Link href='https://www.facebook.com/ar.re.3532/' target="_blank">
+                    <MotionImage
+                        whileHover={{
+                            rotate: -50,
+                            scale: 1.2,
+                            transition: { type: 'spring', stiffness: 900, damping: 11 },
+                        }}
+                        src='/facebook.png'
+                        width={30}
+                        className='border-2 border-white rounded-full bg-white'
+                        height={30}
+                        alt="facebook" />
+                </Link>
+                <Link href='https://twitter.com/Refaei_Eshta' target="_blank">
+                    <MotionImage
+                        whileHover={{
+                            rotate: 50,
+                            scale: 1.2,
+                            transition: { type: 'spring', stiffness: 900, damping: 11 },
+                        }}
+                        src='/twitter.png'
+                        width={30}
+                        className='border-2 border-white rounded-full bg-white'
+                        height={30}
+                        alt="twitter" />
+                </Link>
+               
             </div>
             {/* RESPONSIVE MENU */}
             <div className='md:hidden'>

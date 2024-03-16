@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from "next/link";
 import HeroText from "@/components/HeroText";
 import ParticlesComponent from "@/components/Particles";
-import { Button  } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 
 export default function Home() {
   const sentence1 = "Hi,".split('');
@@ -19,19 +19,19 @@ export default function Home() {
   return (
     <motion.div
       className="h-full z-10"
-      initial={{y:"-200vh"}}
-      animate={{y:'0%'}}
-      transition = {{duration:1}}
+      initial={{ y: "-200vh" }}
+      animate={{ y: '0%' }}
+      transition={{ duration: 1 }}
     >
-        <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-48 text-lg text-white">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-48 text-lg text-white">
         {/* IMAGE CONTAINER */}
-        <motion.div 
-        initial={{y:-300}} 
-        animate={{y:0}} 
-        transition={{delay:0.6, ease:'easeIn'}} 
-        className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px]">
+        <motion.div
+          initial={{ y: -300 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.6, ease: 'easeIn' }}
+          className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px]">
           <Image
-            priority= {true}
+            priority={true}
             src='/hero1.png'
             alt='hero'
             fill
@@ -40,27 +40,27 @@ export default function Home() {
           />
         </motion.div>
         {/* TEXT CONTAINER */}
-        <motion.div 
-        initial={{y:700}} 
-        animate={{y:0}} 
-        transition={{delay:0.6, ease:'easeIn'}} 
-        className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around md:justify-center">
+        <motion.div
+          initial={{ y: 700 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.6, ease: 'easeIn' }}
+          className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 items-center justify-around md:justify-center">
           <h1 className="md:text-6xl text-4xl font-bold self-start">
-            {sentence1.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
-            <br/>
-            {sentence2.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {sentence1.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
+            <br />
+            {sentence2.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
             {' '}
-            {sentence3.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
-            <br/>
-            {sentence4.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {sentence3.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
+            <br />
+            {sentence4.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
             {' '}
-            {sentence5.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
-            {' '}
-
-            {sentence6.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {sentence5.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
             {' '}
 
-            {sentence7.map((letter,index)=>{return  (<HeroText key={index}> {letter} </HeroText>)})}
+            {sentence6.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
+            {' '}
+
+            {sentence7.map((letter, index) => { return (<HeroText key={index}> {letter} </HeroText>) })}
 
 
 
@@ -73,21 +73,40 @@ export default function Home() {
           </p>
           {/* BUTTONS */}
           <div className="relative flex gap-4 w-full">
-            <Link className="relative px-4 py-2 md:px-6 md:py-3 font-bold text-black group" href='/portfolio'>
-            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
-            <span className="relative">My Work</span>
-            </Link>
-            <Link className="relative px-4 py-2 md:px-6 md:py-3 font-bold text-black group" href='/contact'>
-            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white group-hover:translate-x-0 group-hover:translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full border-4 border-slate-800"></span>
-            <span className="relative">Contact Me</span>
-            </Link>
+
+            {/* BTN #1 */}
+            <div class="relative inline-flex  group">
+              <div
+                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+              </div>
+              <Link href="/portfolio" title="Get quote now"
+                class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                role="button">
+                  My Projects
+              </Link>
+            </div>
+
+            {/* BTN #2 */ }
+            <div class="relative inline-flex  group">
+              <div
+                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+              </div>
+              <Link href="/contact" title="Get quote now"
+                class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                role="button">Contact Me
+              </Link>
+            </div>
+
+
+            <a href="#_" class="">
+            </a>
+
+
           </div>
         </motion.div>
       </div>
       <div className='relative -z-10'>
-      <ParticlesComponent/>
+        <ParticlesComponent />
       </div>
     </motion.div>
   );
