@@ -76,7 +76,7 @@ const PortfolioPage = () => {
         <div className="w-screen h-[600vh] relative" ref={ref}>
           {/* INTRO DIV */}
           <div className="flex flex-col">
-            <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-5xl md:text-8xl font-bold text-center">
+            <div className="h-[calc(100vh-96px)] flex flex-col gap-2 items-center justify-center text-[40px] text-4xl md:text-7xl font-bold text-center">
               <div>
               {TEXT.split('').map((letter,i)=> (
             <motion.span 

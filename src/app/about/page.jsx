@@ -224,31 +224,31 @@ const AboutPage = () => {
                   {/* JOB#1 */}
                   <div>
                     {/* JOB TITLE */}
-                    <div className="bg-white p-3 font-semiBold rounded-b-lg rounded-s-lg w-fit">Full Stack Web Developer</div>
+                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">Full Stack Web Developer</div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-sm text-white  italic">Juncky Coders, a Local tech firm in Suez that specializes in providing a range of online services to users specially web projects. It was my first job in tech field ever! </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">Juncky Coders, a Local tech firm in Suez that specializes in providing a range of online services to users specially web projects. It was my first job in tech field ever! </div>
                     {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-sm font-semiBold">
+                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
                       2018 {'-->'} 2020 (2 years)
 
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-sm font-semiBold w-fit">Junkey Coders</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Junkey Coders</div>
                   </div>
                   {/* JOB#2 */}
                   {/* JOB TITLE */}
                   <div className="pt-48 pb-20">
-                    <div className="bg-white  p-3 font-semiBold rounded-b-lg rounded-s-lg w-fit">Front End Web Developer <span className='text-sky-400'>
+                    <div className="bg-white  p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">Front End Web Developer <span className='text-sky-400'>
                     (freelancer)</span>
                       </div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-sm text-white italic">Worked as a freelancer on several websites and fixed alot of bugs in design and delivered very good services to my clients. </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">Worked as a freelancer on several websites and fixed alot of bugs in design and delivered very good services to my clients. </div>
                     {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-sm font-semiBold">
+                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
                     2020 {'-->'} 2022 (2 years)
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-sm font-semiBold w-fit mb-96">Fiverr inc</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-96">Fiverr inc</div>
                   </div>
                 </motion.div>
                 {/* CENTER */}
@@ -265,15 +265,15 @@ const AboutPage = () => {
                 <motion.div className="w-1/3 " initial={{ x: '300px' }} animate={isSkillRefInView ? { x: 0 } : {}} transition={{ delay: 0.5 }}>
                   <div className="pt-48">
                     {/* JOB TITLE */}
-                    <div className="bg-white  p-3 font-semiBold rounded-b-lg rounded-e-lg w-fit">DB Administrator and Web Developer</div>
+                    <div className="bg-white  p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-e-lg w-fit">DB Administrator and Web Developer</div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-sm text-white italic">I was A DB administrator and created some web applications using react js , next js sanity cms , php , laravel and my SQL using alot of third parties , tools and APIs. </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">I was A DB administrator and created some web applications using react js , next js sanity cms , php , laravel and my SQL using alot of third parties , tools and APIs. </div>
                     {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-sm font-semiBold">
+                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
                       2022 {'-->'} 2024
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-sm font-semiBold w-fit">Egyptian Army</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Egyptian Army</div>
                   </div>
                 </motion.div>
 

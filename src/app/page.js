@@ -5,6 +5,7 @@ import Link from "next/link";
 import HeroText from "@/components/HeroText";
 import ParticlesComponent from "@/components/Particles";
 import { Button } from "@material-tailwind/react";
+import { useRef } from "react";
 
 export default function Home() {
   const sentence1 = "Hi,".split('');
@@ -14,7 +15,8 @@ export default function Home() {
   const sentence5 = "Web ".split('');
   const sentence6 = "Developer".split('');
   const sentence7 = "!".split('');
-
+  const MotionImage = motion(Image);
+  const parentRef = useRef();
 
   return (
     <motion.div
@@ -23,20 +25,24 @@ export default function Home() {
       animate={{ y: '0%' }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-48 text-lg text-white">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-48 text-lg text-white ">
         {/* IMAGE CONTAINER */}
         <motion.div
+          ref={parentRef}
           initial={{ y: -300 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.6, ease: 'easeIn' }}
-          className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px]">
-          <Image
+          className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px] overflow-hidden">
+          <MotionImage
+            drag
+            dragPropagation='true'
+            dragConstraints={parentRef}
             priority={true}
             src='/hero1.png'
             alt='hero'
             fill
             sizes="(max-width: auto) , (max-height: auto) "
-            className="object-contain"
+            className="object-contain cursor-grab active:cursor-grabbing hover:hue-rotate-90 transition-transform ease-out duration-400  hover:-translate-y-1"
           />
         </motion.div>
         {/* TEXT CONTAINER */}
@@ -72,33 +78,33 @@ export default function Home() {
             portfolio showcases a diverse collection of projects.
           </p>
           {/* BUTTONS */}
-          <div className="relative flex gap-4 w-full">
+          <div className="relative flex gap-4 w-full pb-8 md:pb-0">
 
             {/* BTN #1 */}
-            <div class="relative inline-flex group">
+            <div className="relative inline-flex group">
               <div
-                class="absolute group-hover:scale-120 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                className="absolute group-hover:scale-120 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/portfolio" title="Get quote now"
-                class="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">
                   My Projects
               </Link>
             </div>
 
             {/* BTN #2 */ }
-            <div class="relative inline-flex group">
+            <div className="relative inline-flex group">
               <div
-                class="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                className="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/contact" title="Get quote now"
-                class="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">Contact Me
               </Link>
             </div>
 
 
-            <a href="#_" class="">
+            <a href="#_" className="">
             </a>
 
 
