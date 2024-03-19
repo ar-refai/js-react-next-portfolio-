@@ -126,7 +126,9 @@ const AboutPage = () => {
 
             {/* BIO DESC */}
             <motion.p initial={{ y: '300px' }} animate={isBioInView ? { y: 0 } : {}} transition={{ delay: 0.2 }} className='text-lg'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga magni culpa, nemo maxime ad iusto impedit ipsum sequi quod aperiam. Tenetur numquam fugit quis itaque iure minus magni earum!
+            I graduated from Suez University with a degree in computer science in Sep 2021, where I learned various programming languages and frameworks, such as Laravel, PHP, and Java Script. Since Apr 2022, I have been working as a system administrator and web developer at the Egyptian army and on Freelance websites, where I manage databases, servers, and websites for various projects and operations.
+
+            In my current role, I have done a lot of projects and learned a lot of full stack web development skills, such as creating dynamic and responsive web pages, integrating APIs, and deploying applications. I have also worked as an army officer, where I gained leadership, teamwork, and problem-solving skills, as well as a sense of duty and honor. I am passionate about using technology to improve my job efficiency, and I would love to join an organization that shares this vision and values. I believe I can bring diverse perspectives and experiences to the team, as well as a strong work ethic, a creative mindset, and a willingness to learn and grow.
             </motion.p>
 
             {/* BIO QUOTE */}
