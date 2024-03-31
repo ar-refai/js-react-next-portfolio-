@@ -34,8 +34,6 @@ export default function Home() {
           transition={{ delay: 0.6, ease: 'easeIn' }}
           className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px] overflow-hidden">
           <MotionImage
-            drag
-            dragConstraints={parentRef}
             src='/hero1.png'
             alt='hero'
             fill
