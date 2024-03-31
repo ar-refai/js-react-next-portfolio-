@@ -35,14 +35,12 @@ export default function Home() {
           className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px] overflow-hidden">
           <MotionImage
             drag
-            dragPropagation='true'
             dragConstraints={parentRef}
-            priority={true}
             src='/hero1.png'
             alt='hero'
             fill
             sizes="(max-width: auto) , (max-height: auto) "
-            className="object-contain cursor-grab active:cursor-grabbing hover:hue-rotate-90 transition-transform ease-out duration-400  hover:-translate-y-1"
+            className="object-contain cursor-grab active:cursor-grabbing hover:hue-rotate-[150deg] transition-transform ease-out duration-400  hover:-translate-y-1"
           />
         </motion.div>
         {/* TEXT CONTAINER */}
@@ -83,10 +81,10 @@ export default function Home() {
             {/* BTN #1 */}
             <div className="relative inline-flex group">
               <div
-                className="absolute group-hover:scale-120 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3ba2d9] via-[#0a74ae55] to-[#1a7eb455] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                className="absolute group-hover:scale-120 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#51c2ff] via-[#2ba8ec] to-[#0084ff] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/portfolio" title="Get quote now"
-                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-gray-900 transition-all duration-200 bg-white font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">
                   My Projects
               </Link>
@@ -95,10 +93,10 @@ export default function Home() {
             {/* BTN #2 */ }
             <div className="relative inline-flex group">
               <div
-                className="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1a7eb455] via-[#0a74ae55] to-[#3ba2d9] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                className="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#51c2ff] via-[#2ba8ec] to-[#0084ff] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
               </div>
               <Link href="/contact" title="Get quote now"
-                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-gray-900 transition-all duration-200 bg-white font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">Contact Me
               </Link>
             </div>
