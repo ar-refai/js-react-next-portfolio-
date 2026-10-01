@@ -158,68 +158,68 @@ const AboutPage = () => {
             </div>
           </div>
           {/* EXPERIENCE CONTAINER */}
-          <div className="flex flex-col text-zinc-950 gap-12 justify-center mb-96 pb-96" >
-            <h1 className='font-bold text-2xl text-white'>EXPERIENCE</h1>
+          <div className="flex flex-col text-zinc-950 gap-12 justify-center pb-48 pt-24" ref={expRef}>
+            <motion.h1 initial={{ x: '-300px' }} animate={isExpInView ? { x: 0 } : {}} transition={{ delay: 0.1 }} className='font-bold text-2xl text-white'>EXPERIENCE</motion.h1>
             {/* EXPERIENCE LIST */}
-            <div className="">
-              {/* EXPERIENCE LIST ITEM*/}
-              <div className="flex justify-between  h-48" ref={expRef}>
+            <div className="flex flex-col">
+
+              {/* JOB 3 (Newest) */}
+              <div className="flex justify-between h-64 sm:h-56 group">
                 {/* LEFT */}
-                <motion.div initial={{ x: '-300px' }} animate={isSkillRefInView ? { x: 0 } : {}} transition={{ delay: 0.5 }} className="w-1/3">
-                  {/* JOB#1 */}
-                  <div>
-                    {/* JOB TITLE */}
-                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">DB Admin & Full Stack Developer</div>
-                    {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">Maintained and enhanced large-scale legacy Oracle-based systems. Refactored tightly-coupled C# desktop modules into maintainable components.</div>
-                    {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                      04/2022 - 04/2024
-                    </div>
-                    {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-4">Egyptian Army</div>
-                  </div>
-                  
-                  {/* JOB#3 */}
-                  <div className="pt-24 md:pt-32">
-                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">.NET Core API Developer</div>
-                    {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">Architected scalable RESTful APIs on ASP.NET Core (.NET 8) following Onion Architecture. Integrated Stripe/Aman and optimized SQL Server queries.</div>
-                    {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                      10/2024 - Present
-                    </div>
-                    {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-96">Merge for Digital Solutions</div>
-                  </div>
+                <motion.div initial={{ x: '-300px' }} animate={isExpInView ? { x: 0 } : {}} transition={{ delay: 0.3 }} className="w-1/3">
+                  <div className="bg-white p-3 font-bold text-sm md:text-lg rounded-b-lg rounded-s-lg w-fit shadow-[0_0_15px_rgba(56,189,248,0.2)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.6)] transition-shadow duration-300">.NET Core API Developer</div>
+                  <div className="p-2 md:p-3 text-[12px] md:text-sm text-gray-300 italic group-hover:text-white transition-colors duration-300">Architected scalable RESTful APIs on ASP.NET Core (.NET 8). Integrated Stripe/Aman and optimized SQL Server queries.</div>
+                  <div className="p-2 md:p-3 text-sky-400 text-[11px] md:text-sm font-semibold">10/2024 - Present</div>
+                  <div className="p-1 rounded bg-white text-[11px] md:text-sm font-semibold w-fit">Merge for Digital Solutions</div>
                 </motion.div>
                 {/* CENTER */}
-                <div className="w-1/6 flex justify-center mt-32 sm:mt-44 md:mt-44 lg:mt-32 xl:34">
-                  {/* LINE */}
-                  <div className=" w-1 h-[500px] bg-gray-700 rounded relative">
-                    {/* LINE CIRCLE */}
-                    <div className="absolute w-3 h-3 rounded-full ring-4 ring-gray-700 top-[0] -left-1 bg-sky-300"></div>
-                    <div className="absolute w-3 h-3 rounded-full ring-4 ring-gray-700 top-[250px] -left-1 bg-sky-300"></div>
-                    <div className="absolute w-3 h-3 rounded-full ring-4 ring-gray-700 bottom-[0] -left-1 bg-sky-300"></div>
+                <div className="w-1/6 flex justify-center relative">
+                  <div className="w-1 h-full bg-gray-700 rounded relative group-hover:bg-sky-700 transition-colors duration-300">
+                    <div className="absolute w-4 h-4 rounded-full ring-4 ring-sky-900 top-4 -left-1.5 bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.4)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.9)] group-hover:scale-125 transition-all duration-300"></div>
                   </div>
                 </div>
                 {/* RIGHT */}
-                <motion.div className="w-1/3 " initial={{ x: '300px' }} animate={isSkillRefInView ? { x: 0 } : {}} transition={{ delay: 0.5 }}>
-                  <div className="pt-48 mt-8">
-                    {/* JOB TITLE */}
-                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-e-lg w-fit">Full Stack Developer</div>
-                    {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">Refactored legacy systems into modular architectures. Built secure RESTful APIs with role-based auth and optimized database schemas.</div>
-                    {/* JOB DATE */}
-                    <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                      04/2024 - 10/2024
-                    </div>
-                    {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Staron Egypt</div>
-                  </div>
-                </motion.div>
-
+                <div className="w-1/3"></div>
               </div>
+
+              {/* JOB 2 (Middle) */}
+              <div className="flex justify-between h-64 sm:h-56 group">
+                {/* LEFT */}
+                <div className="w-1/3"></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center relative">
+                  <div className="w-1 h-full bg-gray-700 rounded relative group-hover:bg-sky-700 transition-colors duration-300">
+                    <div className="absolute w-4 h-4 rounded-full ring-4 ring-sky-900 top-4 -left-1.5 bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.4)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.9)] group-hover:scale-125 transition-all duration-300"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <motion.div initial={{ x: '300px' }} animate={isExpInView ? { x: 0 } : {}} transition={{ delay: 0.5 }} className="w-1/3">
+                  <div className="bg-white p-3 font-bold text-sm md:text-lg rounded-b-lg rounded-e-lg w-fit shadow-[0_0_15px_rgba(56,189,248,0.2)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.6)] transition-shadow duration-300">Full Stack Developer</div>
+                  <div className="p-2 md:p-3 text-[12px] md:text-sm text-gray-300 italic group-hover:text-white transition-colors duration-300">Refactored legacy systems into modular architectures. Built secure RESTful APIs with role-based auth.</div>
+                  <div className="p-2 md:p-3 text-sky-400 text-[11px] md:text-sm font-semibold">04/2024 - 10/2024</div>
+                  <div className="p-1 rounded bg-white text-[11px] md:text-sm font-semibold w-fit">Staron Egypt</div>
+                </motion.div>
+              </div>
+
+              {/* JOB 1 (Oldest) */}
+              <div className="flex justify-between h-64 sm:h-56 group">
+                {/* LEFT */}
+                <motion.div initial={{ x: '-300px' }} animate={isExpInView ? { x: 0 } : {}} transition={{ delay: 0.7 }} className="w-1/3">
+                  <div className="bg-white p-3 font-bold text-sm md:text-lg rounded-b-lg rounded-s-lg w-fit shadow-[0_0_15px_rgba(56,189,248,0.2)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.6)] transition-shadow duration-300">DB Admin & Full Stack Developer</div>
+                  <div className="p-2 md:p-3 text-[12px] md:text-sm text-gray-300 italic group-hover:text-white transition-colors duration-300">Maintained large-scale Oracle-based systems. Refactored tightly-coupled C# desktop modules.</div>
+                  <div className="p-2 md:p-3 text-sky-400 text-[11px] md:text-sm font-semibold">04/2022 - 04/2024</div>
+                  <div className="p-1 rounded bg-white text-[11px] md:text-sm font-semibold w-fit">Egyptian Army</div>
+                </motion.div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center relative">
+                  <div className="w-1 h-full bg-gray-700 rounded relative group-hover:bg-sky-700 transition-colors duration-300">
+                    <div className="absolute w-4 h-4 rounded-full ring-4 ring-sky-900 top-4 -left-1.5 bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.4)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.9)] group-hover:scale-125 transition-all duration-300"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3"></div>
+              </div>
+
             </div>
           </div>
 
