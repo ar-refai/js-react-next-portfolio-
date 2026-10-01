@@ -8,82 +8,21 @@ import ParticlesComponent from '@/components/Particles';
 import TooltipButton from '@/components/utils/TooltipButton';
 
 const SKILLS = [
-  {
-    name: 'HTML5',
-    icon:'IoLogoHtml5',
-  },
-  {
-    name: 'CSS3',
-    icon:'IoLogoCss3',
-  },
-  {
-    name: 'SASS',
-    icon:'IoLogoSass',
-  },
-  {
-    name: 'BOOTSTRAP',
-    icon:'BsBootstrapFill',
-  },
-  {
-    name: 'TAILWIND',
-    icon:'mSiTailwindcss',
-  },
-  {
-    name: 'JS',
-    icon:'DiJavascript1',
-  },
-  {
-    name: 'REACT',
-    icon:'IoLogoReact ',
-  },
-  {
-    name: 'JSX',
-    icon:'TbFileTypeJsx ',
-  },
-  {
-    name: 'NEXT',
-    icon:'IoLogoReact ',
-  },
-  {
-    name: 'PHP',
-    icon:'FaPhp',
-  },
-  {
-    name: 'MYSQL',
-    icon:'SiMysql ',
-  },
-  {
-    name: 'LARAVEL',
-    icon:'IoLogoLaravel ',
-  },
-  {
-    name: 'API',
-    icon:' TbApi',
-  },
-  {
-    name: 'JSON',
-    icon:'TbJson ',
-  },
-  {
-    name: 'FRAMER',
-    icon:'TbBrandFramer ',
-  },
-  {
-    name: 'PYTHON',
-    icon:'IoLogoPython ',
-  },
-  {
-    name: 'PHOTOSHOP',
-    icon:'SiAdobephotoshop ',
-  },
-  {
-    name: 'GIT',
-    icon:'FaGit',
-  },
-  {
-    name: 'GITHUB',
-    icon:'BsGithub ',
-  }
+  { name: 'C#' },
+  { name: '.NET 8' },
+  { name: 'ASP.NET Core' },
+  { name: 'Clean Architecture' },
+  { name: 'Onion Architecture' },
+  { name: 'SOLID' },
+  { name: 'Domain-Driven Design (DDD)' },
+  { name: 'TypeScript' },
+  { name: 'React.js' },
+  { name: 'Next.js' },
+  { name: 'SQL Server' },
+  { name: 'Docker' },
+  { name: 'RESTful API' },
+  { name: 'Azure OpenAI' },
+  { name: 'Git' }
 ]
 
 const AboutPage = () => {
@@ -113,7 +52,7 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center" ref={bioRef}>
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="/developer.jpg"
+              src="/hero-face.png"
               alt=""
               width={112}
               height={112}
@@ -126,14 +65,14 @@ const AboutPage = () => {
 
             {/* BIO DESC */}
             <motion.p initial={{ y: '300px' }} animate={isBioInView ? { y: 0 } : {}} transition={{ delay: 0.2 }} className='text-lg'>
-            I graduated from Suez University with a degree in computer science in Sep 2021, where I learned various programming languages and frameworks, such as Laravel, PHP, and Java Script. Since Apr 2022, I have been working as a system administrator and web developer at the Egyptian army and on Freelance websites, where I manage databases, servers, and websites for various projects and operations.
+            I am a Backend Engineer with 3+ years of experience building production ASP.NET Core APIs and enterprise systems. I specialize in Clean/Onion Architecture, SOLID principles, and Domain-Driven Design (DDD).
             </motion.p>
 
             <motion.p initial={{ y: '300px' }} animate={isBioInView ? { y: 0 } : {}} transition={{ delay: 0.2 }} className='text-lg'>
-            In my current role, I have done a lot of projects and learned a lot of full stack web development skills, such as creating dynamic and responsive web pages, integrating APIs, and deploying applications. I have also worked as an army officer, where I gained leadership, teamwork, and problem-solving skills, as well as a sense of duty and honor.
+            I have a strong track record of delivering multi-tenant platforms, automated financial workflows, and secure payment gateway integrations for real production traffic.
             </motion.p>
             <motion.p initial={{ y: '300px' }} animate={isBioInView ? { y: 0 } : {}} transition={{ delay: 0.2 }} className='text-lg'>
-            I am passionate about using technology to improve my job efficiency, and I would love to join an organization that shares this vision and values. I believe I can bring diverse perspectives and experiences to the team, as well as a strong work ethic, a creative mindset, and a willingness to learn and grow.
+            Currently, I am extending this backend foundation into AI-enabled application development, integrating LLM APIs with structured output and tool calling into ASP.NET Core services.
             </motion.p>
             {/* BIO QUOTE */}
 
@@ -230,31 +169,28 @@ const AboutPage = () => {
                   {/* JOB#1 */}
                   <div>
                     {/* JOB TITLE */}
-                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">Full Stack Web Developer</div>
+                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">DB Admin & Full Stack Developer</div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">Juncky Coders, a Local tech firm in Suez that specializes in providing a range of online services to users specially web projects. It was my first job in tech field ever! </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">Maintained and enhanced large-scale legacy Oracle-based systems. Refactored tightly-coupled C# desktop modules into maintainable components.</div>
                     {/* JOB DATE */}
                     <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                      2018 {'-->'} 2020 (2 years)
-
+                      04/2022 - 04/2024
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Junkey Coders</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-4">Egyptian Army</div>
                   </div>
-                  {/* JOB#2 */}
-                  {/* JOB TITLE */}
-                  <div className="pt-48 pb-20">
-                    <div className="bg-white  p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">Front End Web Developer <span className='text-sky-400'>
-                    (freelancer)</span>
-                      </div>
+                  
+                  {/* JOB#3 */}
+                  <div className="pt-24 md:pt-32">
+                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-s-lg w-fit">.NET Core API Developer</div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">Worked as a freelancer on several websites and fixed alot of bugs in design and delivered very good services to my clients. </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">Architected scalable RESTful APIs on ASP.NET Core (.NET 8) following Onion Architecture. Integrated Stripe/Aman and optimized SQL Server queries.</div>
                     {/* JOB DATE */}
                     <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                    2020 {'-->'} 2022 (2 years)
+                      10/2024 - Present
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-96">Fiverr inc</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit mb-96">Merge for Digital Solutions</div>
                   </div>
                 </motion.div>
                 {/* CENTER */}
@@ -269,17 +205,17 @@ const AboutPage = () => {
                 </div>
                 {/* RIGHT */}
                 <motion.div className="w-1/3 " initial={{ x: '300px' }} animate={isSkillRefInView ? { x: 0 } : {}} transition={{ delay: 0.5 }}>
-                  <div className="pt-48">
+                  <div className="pt-48 mt-8">
                     {/* JOB TITLE */}
-                    <div className="bg-white  p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-e-lg w-fit">DB Administrator and Web Developer</div>
+                    <div className="bg-white p-3 font-semiBold text-md md:text-lg rounded-b-lg rounded-e-lg w-fit">Full Stack Developer</div>
                     {/* JOB DESC */}
-                    <div className="p-3 text-[12px] md:text-sm text-white italic">I was A DB administrator and created some web applications using react js , next js sanity cms , php , laravel and my SQL using alot of third parties , tools and APIs. </div>
+                    <div className="p-3 text-[12px] md:text-sm text-white italic">Refactored legacy systems into modular architectures. Built secure RESTful APIs with role-based auth and optimized database schemas.</div>
                     {/* JOB DATE */}
                     <div className="p-3 text-sky-400 text-[12px] md:text-sm font-semiBold">
-                      2022 {'-->'} 2024
+                      04/2024 - 10/2024
                     </div>
                     {/* COMPANY NAME */}
-                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Egyptian Army</div>
+                    <div className="p-1 rounded bg-white text-[12px] md:text-sm font-semiBold w-fit">Staron Egypt</div>
                   </div>
                 </motion.div>
 

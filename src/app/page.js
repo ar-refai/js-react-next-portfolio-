@@ -12,9 +12,9 @@ export default function Home() {
   const sentence2 = "I'am".split('');
   const sentence3 = "Abdelrahman ".split('');
   const sentence4 = "A ".split('');
-  const sentence5 = "Web ".split('');
-  const sentence6 = "Developer".split('');
-  const sentence7 = "!".split('');
+  const sentence5 = ".NET  ".split('');
+  const sentence6 = "Backend ".split('');
+  const sentence7 = "Engineer!".split('');
   const MotionImage = motion(Image);
   const parentRef = useRef();
 
@@ -34,7 +34,7 @@ export default function Home() {
           transition={{ delay: 0.6, ease: 'easeIn' }}
           className="md:h-1/2 lg:h-full lg:w-1/2 relative h-[340px] overflow-hidden">
           <MotionImage
-            src='/hero1.png'
+            src='/hero-face.png'
             alt='hero'
             fill
             sizes="(max-width: auto) , (max-height: auto) "
@@ -84,11 +84,11 @@ export default function Home() {
               <Link href="/portfolio" title="Get quote now"
                 className="relative inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-4 md:font-bold text-md  text-gray-900 transition-all duration-200 bg-white font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button">
-                  My Projects
+                My Projects
               </Link>
             </div>
 
-            {/* BTN #2 */ }
+            {/* BTN #2 */}
             <div className="relative inline-flex group">
               <div
                 className="absolute group-hover:scale-110 transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#51c2ff] via-[#2ba8ec] to-[#0084ff] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">

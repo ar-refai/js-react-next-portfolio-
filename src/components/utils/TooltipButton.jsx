@@ -100,9 +100,13 @@ const TooltipButton = ({ children }) => {
             }}
             className=" bg-zinc-950 text-white px-4 py-3 shadow-xl shadow-white/70"
         >
-            {IconComponent && (
+            {IconComponent ? (
                 <Button className="rounded p-2 text-sm cursor-pointer bg-white text-zinc-950 hover:bg-[#ffffff22] hover:text-white transition-all duration-200 ease-in">
                     <IconComponent className="text-3xl" />
+                </Button>
+            ) : (
+                <Button className="rounded p-2 text-sm cursor-pointer bg-white text-zinc-950 hover:bg-[#ffffff22] hover:text-white transition-all duration-200 ease-in font-bold">
+                    {children.name}
                 </Button>
             )}
         </Tooltip>

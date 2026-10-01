@@ -62,16 +62,8 @@ const ContactPage = () => {
           <motion.div>
             <div className="py-4 flex flex-col justify-center sm:py-12 ">
               <div className="relative group sm:max-w-xl sm:mx-auto ">
-                {/* THE UNDER CARD #1 */}
-                <motion.div
-                  className="absolute px-2 inset-0 bg-gradient-to-r from-sky-800 opacity-50 to-sky-900 shadow-lg transform group-hover:rotate-6 -rotate-6 rounded-lg sm:rounded-3xl duration-200 ease-out transition-all">
-                </motion.div>
-                {/* THE UNDER CARD #2 */}
-                <motion.div
-                  className="absolute px-2 inset-0 bg-gradient-to-r from-sky-900 opacity-50 to-sky-800 shadow-lg transform group-hover:rotate-12 -rotate-12  rounded-lg sm:rounded-3xl duration-200 ease-out transition-all">
-                </motion.div>
                 {/* THE UPPER CARD */}
-                <motion.div className="text-white px-6 md:px-8 relative py-6 bg-gradient-to-br from-sky-700 to-sky-900 shadow-lg rounded-lg sm:rounded-3xl sm:p-14 duration-200 ease-out transition-all group-hover:rotate-2">
+                <motion.div className="text-white px-6 md:px-8 relative py-6 backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-lg sm:rounded-3xl sm:p-14 duration-300 ease-out transition-all hover:bg-white/10 hover:border-white/20 hover:-translate-y-2">
 
                   <div className="text-center pb-6">
                     <h1 className="text-3xl font-bold mb-2">Contact Me!</h1>
